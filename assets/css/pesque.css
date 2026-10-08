@@ -1,0 +1,159 @@
+/* Pesque e Pague e Restaurante do Gaspar · "Domingo no Gaspar Alto" · demo WolfStudio */
+:root{--creme:#F4ECD8;--lagoa:#55702F;--mata:#1E3B26;--madeira:#8C3B26;--boia:#E2332A;--ceu:#BFD9E3;--texto:#2A2622;--topo:70px;
+  --onda-cima:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30 Q75 0 150 30 T300 30 T450 30 T600 30 T750 30 T900 30 T1050 30 T1200 30 V0 H0z' fill='black'/%3E%3C/svg%3E")}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--topo) + 12px)}
+body{margin:0;background:var(--creme);color:var(--texto);font:400 1.0625rem/1.6 'Karla',system-ui,sans-serif}
+img{display:block;max-width:100%;height:auto}
+figure,blockquote{margin:0}
+h1,h2,h3{font-family:'Young Serif',Georgia,serif;font-weight:400;line-height:1.1;margin:0 0 .45em;color:var(--mata)}
+h2{font-size:clamp(2rem,4.2vw,3.2rem)}
+p{margin:0 0 1em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--boia);outline-offset:3px;box-shadow:0 0 0 6px #fff}
+.pular{position:absolute;left:12px;top:-80px;z-index:100;background:var(--mata);color:#fff;padding:12px 18px;border-radius:10px;font-weight:700}
+.pular:focus{top:12px}
+.faixa-demo{margin:0;background:#e9dfc6;color:#5a4e3c;font-size:.8125rem;text-align:center;padding:4px 12px}
+.so-cel{display:none}
+
+.topo{position:sticky;top:0;z-index:50;background:rgba(244,236,216,.97);display:flex;align-items:center;gap:18px;padding:8px max(20px,calc((100% - 1200px)/2));border-bottom:2px solid #e3d6b6}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-height:44px}
+.marca span{display:flex;flex-direction:column;line-height:1.15}
+.marca strong{font:400 1.15rem/1.15 'Young Serif',serif;color:var(--mata)}
+.marca small{font-size:.85rem;color:#5a4e3c}
+.status{margin:0;font-weight:700;color:var(--mata);display:flex;align-items:center;gap:8px}
+.status::before{content:"";width:12px;height:12px;border-radius:50%;background:#a59f90}
+.status[data-aberto="sim"]::before{background:#2f8a3e;box-shadow:0 0 0 4px rgba(47,138,62,.2)}
+
+.bt{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:14px;font:700 1.02rem/1 'Karla',sans-serif;text-decoration:none;border:0;cursor:pointer;text-align:center}
+.bt-boia{background:var(--boia);color:#fff;box-shadow:0 4px 0 #a51f19}
+.bt-boia:hover{background:#c92920}
+.bt-mata{background:var(--mata);color:#fff;box-shadow:0 4px 0 #0f2215}
+.bt-topo{min-height:44px;padding:0 18px}
+.acoes{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+
+/* hero */
+.hero{background:var(--ceu)}
+.hero-ceu{max-width:980px;margin:0 auto;padding:54px 20px 40px;text-align:center}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4.4rem)}
+.hero-sub{font-size:1.3rem;color:var(--mata);margin-bottom:24px}
+.hero-lagoa{position:relative;margin-top:-1px}
+.hero-lagoa img{width:100%;height:clamp(300px,52vw,620px);object-fit:cover}
+.hero-lagoa::before,.hero-lagoa::after{content:"";position:absolute;left:0;right:0;height:46px;background:var(--ceu);-webkit-mask:var(--onda-cima) 0 0/600px 100% repeat-x;mask:var(--onda-cima) 0 0/600px 100% repeat-x;z-index:1}
+.hero-lagoa::before{top:-1px}
+.hero-lagoa::after{bottom:-1px;background:var(--creme);transform:scaleY(-1)}
+.plaquinha{position:absolute;top:0;right:max(24px,calc((100% - 1200px)/2 + 24px));z-index:2;background:repeating-linear-gradient(0deg,#8C3B26 0 22px,#7a321f 22px 24px);color:#fff6e4;padding:22px 28px 18px;border-radius:8px;transform:rotate(-3deg);transform-origin:50% -60px;margin-top:70px;text-align:center;box-shadow:0 8px 0 rgba(0,0,0,.18);font-family:'Young Serif',serif;animation:balanca 5s ease-in-out infinite alternate}
+.plaquinha b{display:block;font-weight:400;font-size:1.5rem}
+.plaquinha>span:last-child{font-size:2rem}
+.cordas{position:absolute;left:18%;right:18%;top:-70px;height:72px;border-left:2px solid #4b3a2b;border-right:2px solid #4b3a2b}
+@keyframes balanca{from{transform:rotate(-3deg)}to{transform:rotate(2deg)}}
+.boia-flutua{position:absolute;left:12%;bottom:18px;z-index:2;animation:flutua 3s ease-in-out infinite alternate}
+@keyframes flutua{from{transform:translateY(0) rotate(-4deg)}to{transform:translateY(-8px) rotate(4deg)}}
+
+/* semana */
+.semana,.cozinha,.lugar,.grupos,.avaliacoes,.chegar{max-width:1200px;margin:0 auto;padding:70px 20px}
+.semana{text-align:center}
+.quadro{display:inline-block;background:repeating-linear-gradient(0deg,#8C3B26 0 46px,#76301e 46px 49px);color:#fff6e4;border-radius:14px;padding:16px 40px;box-shadow:0 10px 0 rgba(30,59,38,.2);border:8px solid #5f2716;max-width:640px;width:100%}
+.quadro ul{list-style:none;margin:0;padding:0}
+.quadro li{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:2px dashed rgba(255,246,228,.35);font-size:1.15rem}
+.quadro li:last-child{border:0}
+.quadro b{font:400 1.3rem/1.2 'Young Serif',serif}
+.quadro-hora b{font-size:1.7rem}
+.quadro-hora span{align-self:center}
+.nota{font-size:.95rem;color:#5a4e3c;margin-top:18px}
+
+/* cozinha */
+.cozinha{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:center}
+.cozinha blockquote{border-left:6px solid var(--boia);padding-left:18px}
+.cozinha blockquote p{font:400 1.25rem/1.4 'Young Serif',serif;color:var(--mata);margin-bottom:4px}
+cite{font-style:normal;font-size:.9rem;color:#5a4e3c}
+.seixos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.seixos img{width:100%;aspect-ratio:1;object-fit:cover}
+.s1{border-radius:58% 42% 50% 50%/45% 50% 50% 55%}
+.s2{border-radius:42% 58% 45% 55%/55% 45% 55% 45%;margin-top:40px}
+.s3{border-radius:50% 50% 40% 60%/60% 40% 60% 40%;margin-top:-40px}
+.s4{border-radius:45% 55% 58% 42%/50% 58% 42% 50%}
+
+/* pesca: faixa de lagoa entre ondas */
+.pesca{background:var(--lagoa);color:#f7f2e3;position:relative;padding:90px 20px}
+.pesca::before,.pesca::after{content:"";position:absolute;left:0;right:0;height:46px;background:var(--creme);-webkit-mask:var(--onda-cima) 0 0/600px 100% repeat-x;mask:var(--onda-cima) 0 0/600px 100% repeat-x}
+.pesca::before{top:-1px}
+.pesca::after{bottom:-1px;transform:scaleY(-1)}
+.pesca h2{color:#fff}
+.pesca-dentro{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:center}
+.pergunte{font-weight:700;margin-top:18px}
+.boias{list-style:none;padding:0;margin:0 0 24px}
+.boias li{display:flex;align-items:center;gap:12px;padding:8px 0;font-size:1.08rem;border-bottom:1px solid rgba(255,255,255,.2)}
+.boias svg{flex:none}
+.pesca-fotos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pesca-fotos img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:20px}
+.pesca-fotos img:first-child{grid-column:1/3}
+
+/* lugar: mosaico */
+.mosaico{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:190px;gap:12px}
+.mosaico img{width:100%;height:100%;object-fit:cover;border-radius:18px}
+.m1{grid-column:span 3;grid-row:span 2}.m2{grid-column:span 3}.m3{grid-column:span 3}
+.m4{grid-column:span 2}.m5{grid-column:span 4}
+.m5 img{border-radius:18px 18px 90px 18px}
+
+/* grupos */
+.grupos{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.grupo-form{background:#fffaf0;border:3px solid var(--mata);border-radius:22px;padding:28px}
+label{display:block;font-weight:700;margin:12px 0 6px}
+input[type=date],input[type=number]{width:100%;min-height:50px;border:2px solid #8a7f6a;border-radius:12px;padding:10px 14px;font:inherit;background:#fff;color:var(--texto)}
+input[aria-invalid=true]{border-color:var(--boia);box-shadow:0 0 0 2px var(--boia)}
+fieldset{border:0;padding:0;margin:14px 0 18px;min-width:0}
+legend{font-weight:700;padding:0;margin-bottom:4px}
+.opcao{display:inline-flex;align-items:center;gap:10px;min-height:46px;margin:0 18px 0 0;font-weight:400;cursor:pointer}
+.opcao input{width:22px;height:22px;accent-color:var(--boia);margin:0}
+.erro{color:#b3211a;font-weight:700;margin:6px 0 0}
+.resumo-erros{border:3px solid var(--boia);border-radius:14px;padding:12px 16px;margin-bottom:12px;background:#fff0ec}
+.resumo-erros p{margin:0 0 4px;font-weight:700}
+.resumo-erros ul{margin:0;padding-left:20px}
+.resumo-erros a{display:inline-flex;align-items:center;min-height:44px}
+
+/* avaliações */
+.avaliacoes h2 small{display:block;font:400 1.1rem/1.4 'Karla',sans-serif;color:#5a4e3c;margin-top:6px}
+.trechos{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.trechos li{background:#fffaf0;border-radius:22px 22px 22px 4px;padding:22px;border-bottom:6px solid var(--lagoa)}
+.trechos p{font:400 1.15rem/1.4 'Young Serif',serif;color:var(--mata);margin-bottom:8px}
+
+/* chegar */
+.chegar{display:grid;grid-template-columns:1fr 1fr;gap:40px;border-top:2px dashed #d9c9a3}
+.endereco{font:400 1.4rem/1.35 'Young Serif',serif;color:var(--mata)}
+.contatos{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.contatos li{background:#fffaf0;border-radius:14px;padding:10px 18px}
+.contatos span{display:block;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--madeira)}
+.contatos a,.contatos b{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:1.08rem;word-break:break-word}
+
+.rodape{background:var(--mata);color:#e8e2cf;text-align:center;padding:60px 20px 30px;font-size:.92rem;position:relative}
+.rodape::before{content:"";position:absolute;left:0;right:0;top:-1px;height:40px;background:var(--creme);-webkit-mask:var(--onda-cima) 0 0/600px 100% repeat-x;mask:var(--onda-cima) 0 0/600px 100% repeat-x}
+.rodape p{margin:4px 0}
+
+@media (max-width:900px){
+  .cozinha,.pesca-dentro,.grupos,.chegar{grid-template-columns:1fr}
+  .trechos{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  :root{--topo:64px}
+  .topo{padding:6px 12px;gap:8px}
+  .marca{gap:8px}
+  .bt-topo{padding:0 14px}
+  .marca strong{font-size:.86rem}
+  .marca small{font-size:.76rem}
+  .status{display:none}
+  .hero-ceu{padding:34px 16px 30px}
+  .hero-sub{font-size:1.1rem}
+  .plaquinha{right:14px;padding:12px 16px 10px;margin-top:56px}
+  .plaquinha b{font-size:1.05rem}.plaquinha>span:last-child{font-size:1.3rem}
+  .cordas{top:-56px;height:58px}
+  .semana,.cozinha,.lugar,.grupos,.avaliacoes,.chegar{padding:52px 16px}
+  .quadro{padding:10px 18px}
+  .quadro li{flex-direction:column;gap:2px;font-size:1rem}
+  .pesca{padding:80px 16px}
+  .mosaico{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
+  .m1{grid-column:span 2;grid-row:span 2}.m2,.m3{grid-column:span 1}.m4{grid-column:span 1}.m5{grid-column:span 1}
+  .grupo-form{padding:20px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}

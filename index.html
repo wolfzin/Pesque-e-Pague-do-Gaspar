@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pesque e Pague e Restaurante do Gaspar · Gaspar Alto, Gaspar/SC</title>
+<meta name="description" content="Almoço caseiro no fogão à lenha, de frente para a lagoa. Quarta a domingo, das 8h às 18h, no Gaspar Alto.">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/pesque.css">
+<style>
+/* ===== Movimento (WolfStudio v3) — só roda com JS e sem "reduzir movimento" ===== */
+:root{--e:cubic-bezier(.2,.7,.2,1)}
+.anim :is(.semana h2,.quadro li,.semana .nota,.coz-texto>*,.seixos img,.pesca-texto>*,.pesca-fotos img,.lugar>h2,.lugar>p,.mosaico li,.grupos-texto>*,.grupo-form,.avaliacoes h2,.trechos li,.chegar>div,.contatos li){transition:opacity .7s var(--e) var(--d,0ms),translate .8s var(--e) var(--d,0ms),scale .8s var(--e) var(--d,0ms),rotate .8s var(--e) var(--d,0ms),transform .35s var(--e),box-shadow .35s,border-color .25s,background-color .25s}
+.anim :is(.semana h2,.quadro li,.semana .nota,.coz-texto>*,.seixos img,.pesca-texto>*,.pesca-fotos img,.lugar>h2,.lugar>p,.mosaico li,.grupos-texto>*,.grupo-form,.avaliacoes h2,.trechos li,.chegar>div,.contatos li):not(.in){opacity:0;translate:var(--tx,0px) var(--ty,22px);scale:var(--sc,1)}
+@keyframes sobe{from{opacity:0;translate:0 18px}}
+@keyframes gira{to{rotate:360deg}}
+@media print{.anim *{opacity:1!important;translate:none!important;scale:none!important;clip-path:none!important}}
+.bt{transition:transform .2s var(--e),box-shadow .2s,background-color .2s}
+.bt:hover{transform:translateY(-2px)}
+/* hero: o céu e o texto sobem, a lagoa aparece */
+.hero-ceu>*{animation:sobe .8s var(--e) both}
+.hero-ceu>:nth-child(2){animation-delay:.12s}.hero-ceu>:nth-child(3){animation-delay:.24s}
+.hero-lagoa>img{animation:lagoa 1.2s var(--e) .2s both}
+@keyframes lagoa{from{opacity:0;translate:0 24px}}
+/* semana: o quadro de horários se preenche */
+.anim .quadro li{--ty:12px}
+/* cozinha, pesca e lugar */
+.seixos img:hover,.pesca-fotos img:hover{scale:1.03}
+.anim .seixos img{--sc:.9;--ty:0px}
+.boias svg{transition:translate .35s var(--e)}
+.boias li:hover svg{translate:0 -4px}
+.mosaico li{overflow:hidden}
+.mosaico li img{transition:scale 1.2s var(--e)}
+.mosaico li:hover img{scale:1.05}
+.anim .mosaico li{--sc:.96;--ty:0px}
+.grupo-form input{transition:border-color .2s,box-shadow .2s}
+.trechos li:hover{transform:translateY(-3px)}
+.avaliacoes h2{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+<script>(function(d){if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches)d.classList.add('anim')})(document.documentElement)</script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<p class="faixa-demo">Demonstração WolfStudio — não é o site oficial.</p>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="boia" viewBox="0 0 24 40"><rect x="11" y="0" width="2" height="10" rx="1" fill="#2A2622"/><path d="M12 8a8 8 0 0 1 8 8H4a8 8 0 0 1 8-8z" fill="#E2332A"/><path d="M4 16h16a8 8 0 0 1-16 0z" fill="#fff" stroke="#2A2622" stroke-width="1"/><rect x="11" y="24" width="2" height="12" rx="1" fill="#2A2622"/></symbol>
+</svg>
+
+<header class="topo">
+  <a class="marca" href="#inicio" aria-label="Pesque e Pague e Restaurante do Gaspar, início">
+    <svg width="22" height="36" aria-hidden="true"><use href="#boia"/></svg>
+    <span><strong>Pesque e Pague<br class="so-cel"> e Restaurante do Gaspar</strong><small>Gaspar Alto · Gaspar/SC</small></span>
+  </a>
+  <p class="status" id="status" aria-live="polite">Qua a dom · 8h às 18h</p>
+  <a class="bt bt-boia bt-topo" href="https://wa.me/5547999777913?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">WhatsApp</a>
+</header>
+
+<main id="conteudo">
+  <section class="hero" id="inicio" aria-labelledby="titulo">
+    <div class="hero-ceu">
+      <h1 id="titulo">Almoço no fogão à lenha, de frente para a lagoa.</h1>
+      <p class="hero-sub">Quarta a domingo, no Gaspar Alto.</p>
+      <div class="acoes">
+        <a class="bt bt-boia" href="https://wa.me/5547999777913?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="bt bt-mata" href="#chegar">Como chegar</a>
+      </div>
+    </div>
+    <div class="hero-lagoa">
+      <img width="1250" height="825" src="assets/img/lagoa-panoramica.jpg" alt="Lagoa panorâmica do pesque e pague, cercada de mata, com a casa de madeira do restaurante ao fundo" fetchpriority="high">
+      <div class="plaquinha" aria-hidden="true"><span class="cordas"></span><b>Qua a dom</b><span>8h às 18h</span></div>
+      <svg class="boia-flutua" width="34" height="56" aria-hidden="true"><use href="#boia"/></svg>
+    </div>
+  </section>
+
+  <section class="semana" id="semana" aria-labelledby="t-sem">
+    <h2 id="t-sem">Como é a semana</h2>
+    <div class="quadro">
+      <ul role="list">
+        <li><b>Quarta a sábado</b><span>À la carte</span></li>
+        <li><b>Domingo</b><span>Buffet livre</span></li>
+        <li><b>Segunda e terça</b><span>Fechado</span></li>
+        <li class="quadro-hora"><b>Das 8h às 18h</b><span>de quarta a domingo</span></li>
+      </ul>
+    </div>
+    <p class="nota">Grupos e empresas: consulte pelo WhatsApp. Atendimento à noite com reserva: a confirmar.</p>
+  </section>
+
+  <section class="cozinha" aria-labelledby="t-coz">
+    <div class="coz-texto">
+      <h2 id="t-coz">Na cozinha</h2>
+      <p>Comida caseira feita no fogão à lenha, com peixe e carne. Em volta, pomar e horta sem agrotóxicos, segundo reportagem do Correio Comunitário.</p>
+      <blockquote><p>“Almoço com comida caseira peixe e carne Lugar perfeito para familia e crianças”</p><cite>destaque das avaliações no Google</cite></blockquote>
+    </div>
+    <div class="seixos">
+      <img loading="lazy" decoding="async" width="1200" height="800" class="s1" src="assets/img/fogao-a-lenha.jpg" alt="Fogão à lenha de tijolos com panelas">
+      <img loading="lazy" decoding="async" width="1200" height="800" class="s2" src="assets/img/buffet-panelas-fogao.jpg" alt="Panelas de comida caseira sobre o fogão à lenha">
+      <img loading="lazy" decoding="async" width="700" height="935" class="s3" src="assets/img/buffet-panelas.jpg" alt="Buffet servido em panelas no balcão de madeira">
+      <img loading="lazy" decoding="async" width="700" height="933" class="s4" src="assets/img/buffet-salao.jpg" alt="Mesa de buffet no salão">
+    </div>
+  </section>
+
+  <section class="pesca" id="pesca" aria-labelledby="t-pesca">
+    <div class="pesca-dentro">
+      <div class="pesca-texto">
+        <h2 id="t-pesca">A pesca</h2>
+        <p>As lagoas têm aerador e chafariz. Uma cliente contou, em 2022: “Tem uma lagoa ativa e uma desativada”.</p>
+        <p class="pergunte">Antes de vir pescar, confirme com o restaurante:</p>
+        <ul class="boias" role="list">
+          <li><svg width="16" height="26" aria-hidden="true"><use href="#boia"/></svg>como funciona a pesca e o valor</li>
+          <li><svg width="16" height="26" aria-hidden="true"><use href="#boia"/></svg>se precisa levar equipamento e isca</li>
+          <li><svg width="16" height="26" aria-hidden="true"><use href="#boia"/></svg>quais peixes estão na lagoa</li>
+          <li><svg width="16" height="26" aria-hidden="true"><use href="#boia"/></svg>se dá para levar o peixe limpo</li>
+        </ul>
+        <a class="bt bt-boia" href="https://wa.me/5547999777913?text=Ol%C3%A1!%20Como%20funciona%20a%20pesca%20a%C3%AD%3F" target="_blank" rel="noopener">Perguntar sobre a pesca</a>
+      </div>
+      <div class="pesca-fotos">
+        <img loading="lazy" decoding="async" width="1200" height="800" src="assets/img/lagoa-chafariz.jpg" alt="Lagoa com chafariz ligado e mata ao fundo">
+        <img loading="lazy" decoding="async" width="1200" height="800" src="assets/img/peixe-na-lagoa.jpg" alt="Peixe nadando perto da superfície da lagoa">
+        <img loading="lazy" decoding="async" width="1200" height="800" src="assets/img/lagoa-aerador.jpg" alt="Lagoa com aerador e a casa de madeira ao fundo">
+      </div>
+    </div>
+  </section>
+
+  <section class="lugar" aria-labelledby="t-lugar">
+    <h2 id="t-lugar">O lugar</h2>
+    <p>Salão aberto de madeira, com redes e vista para a lagoa. Estacionamento amplo, segundo avaliação de cliente.</p>
+    <ul class="mosaico" role="list">
+      <li class="m1"><img loading="lazy" decoding="async" width="1200" height="800" src="assets/img/salao-vista-lagoa.jpg" alt="Salão aberto com mesas compridas e vista para a lagoa"></li>
+      <li class="m2"><img loading="lazy" decoding="async" width="1200" height="800" src="assets/img/casa-restaurante-madeira.jpg" alt="Casa de madeira avermelhada do restaurante, com placa Restaurante"></li>
+      <li class="m3"><img loading="lazy" decoding="async" width="1250" height="825" src="assets/img/salao-redes.jpg" alt="Redes penduradas no salão de madeira"></li>
+      <li class="m4"><img loading="lazy" decoding="async" width="1200" height="675" src="assets/img/lagoa-ponte.jpg" alt="Ponte de madeira sobre a lagoa"></li>
+      <li class="m5"><img loading="lazy" decoding="async" width="1600" height="738" src="assets/img/vista-morros.jpg" alt="Vista dos morros do Gaspar Alto"></li>
+    </ul>
+  </section>
+
+  <section class="grupos" id="grupos" aria-labelledby="t-grp">
+    <div class="grupos-texto">
+      <h2 id="t-grp">Vem em grupo?</h2>
+      <p>Família, empresa ou turma de amigos: mande data e número de pessoas, e o restaurante responde pelo WhatsApp.</p>
+      <p class="nota">Funcionamento: quarta a domingo, das 8h às 18h. A reserva só vale depois da resposta do restaurante.</p>
+    </div>
+    <form class="grupo-form" id="grupo" novalidate>
+      <div class="resumo-erros" id="g-erros" tabindex="-1" hidden></div>
+      <label for="g-data">Data</label>
+      <input type="date" id="g-data" aria-describedby="g-data-erro">
+      <p class="erro" id="g-data-erro" hidden></p>
+      <label for="g-pessoas">Número de pessoas</label>
+      <input type="number" id="g-pessoas" min="2" max="300" inputmode="numeric" aria-describedby="g-pessoas-erro">
+      <p class="erro" id="g-pessoas-erro" hidden></p>
+      <fieldset aria-describedby="g-tipo-erro">
+        <legend>Tipo de grupo</legend>
+        <label class="opcao"><input type="radio" name="tipo" value="família" id="g-tipo-1"> Família</label>
+        <label class="opcao"><input type="radio" name="tipo" value="empresa" id="g-tipo-2"> Empresa</label>
+        <label class="opcao"><input type="radio" name="tipo" value="amigos" id="g-tipo-3"> Amigos</label>
+        <p class="erro" id="g-tipo-erro" hidden></p>
+      </fieldset>
+      <button class="bt bt-boia" type="submit">Enviar pelo WhatsApp</button>
+    </form>
+  </section>
+
+  <section class="avaliacoes" aria-labelledby="t-av">
+    <h2 id="t-av">4,6 no Google <small>251 avaliações</small></h2>
+    <ul class="trechos" role="list">
+      <li><blockquote><p>“Melhor lugar pra almoçar e pegar peixes”</p><cite>Marcos, 5★, mar/2026</cite></blockquote></li>
+      <li><blockquote><p>“Ambiente tranquilo, muitas frutas no local hahaha Bons pratos !!!”</p><cite>destaque do Google</cite></blockquote></li>
+      <li><blockquote><p>“Na primeira vez, foi servido buffet e foi ótimo!!”</p><cite>destaque do Google</cite></blockquote></li>
+    </ul>
+  </section>
+
+  <section class="chegar" id="chegar" aria-labelledby="t-cheg">
+    <div>
+      <h2 id="t-cheg">Como chegar</h2>
+      <p class="endereco">Estrada Geral, 12550 · Gaspar Alto<br>Gaspar/SC · CEP 89111-620</p>
+      <p>Logo após o Refúgio.</p>
+      <a class="bt bt-mata" href="https://www.google.com/maps/search/?api=1&amp;query=Pesque%20e%20Pague%20Restaurante%20do%20Gaspar%2C%20Estrada%20Geral%2C%2012550%2C%20Gaspar%20Alto%2C%20Gaspar%20SC" target="_blank" rel="noopener">Traçar rota</a>
+    </div>
+    <ul class="contatos" role="list">
+      <li><span>WhatsApp</span><a href="https://wa.me/5547999777913?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">(47) 99977-7913</a></li>
+      <li><span>Telefone</span><a href="tel:+554731520263">(47) 3152-0263</a></li>
+      <li><span>E-mail</span><a href="mailto:pesquepaguedogaspar@hotmail.com">pesquepaguedogaspar@hotmail.com</a></li>
+      <li><span>Horário</span><b>qua a dom, 8h às 18h · seg e ter fechado</b></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p><strong>Pesque e Pague e Restaurante do Gaspar</strong> · CNPJ 22.354.735/0001-56</p>
+  <p>Demonstração feita por WolfStudio.</p>
+</footer>
+<script src="assets/js/pesque.js"></script>
+<script>
+/* Movimento (WolfStudio v3): revelar ao rolar, contadores e menu ativo. */
+(function(){
+  var R=document.documentElement; if(!R.classList.contains('anim')) return;
+  try{
+    var SEL='.semana h2,.quadro li,.semana .nota,.coz-texto>*,.seixos img,.pesca-texto>*,.pesca-fotos img,.lugar>h2,.lugar>p,.mosaico li,.grupos-texto>*,.grupo-form,.avaliacoes h2,.trechos li,.chegar>div,.contatos li', CNT='.avaliacoes h2';
+    var io=new IntersectionObserver(function(es){
+      var n=0;
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var el=e.target; io.unobserve(el);
+        if(n) el.style.setProperty('--d',Math.min(n,7)*90+'ms');
+        n++; el.classList.add('in');
+        setTimeout(function(){el.style.removeProperty('--d')},1700);
+      });
+    },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    var pend=[].slice.call(document.querySelectorAll(SEL));
+    pend.forEach(function(el){io.observe(el)});
+    /* rolagem rápida pode pular um bloco: o que já ficou para cima aparece sem esperar */
+    var tv=0;
+    function varre(){pend=pend.filter(function(el){
+      if(el.classList.contains('in')) return false;
+      if(el.getBoundingClientRect().bottom<0){io.unobserve(el);el.classList.add('in');return false}
+      return true;
+    })}
+
+    function conta(el){
+      var tn=null;
+      [].some.call(el.childNodes,function(c){if(c.nodeType===3&&/\d,\d/.test(c.nodeValue)){tn=c;return true}});
+      if(!tn) return;
+      var full=tn.nodeValue, m=full.match(/(\d+),(\d)/), alvo=parseFloat(m[1]+'.'+m[2]), t0=null;
+      function f(t){
+        if(!t0) t0=t;
+        var p=Math.min(1,(t-t0)/1100), v=alvo*(1-Math.pow(1-p,3));
+        tn.nodeValue=p<1?full.replace(m[0],v.toFixed(1).replace('.',',')):full;
+        if(p<1) requestAnimationFrame(f);
+      }
+      requestAnimationFrame(f);
+    }
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cio.unobserve(e.target);conta(e.target)}})},{threshold:.6});
+    [].forEach.call(document.querySelectorAll(CNT),function(el){cio.observe(el)});
+
+    var links=[].slice.call(document.querySelectorAll('nav a[href^="#"]')), mapa={};
+    var sio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      links.forEach(function(a){a.classList.remove('on')}); mapa[e.target.id].classList.add('on');
+    })},{rootMargin:'-40% 0px -55% 0px'});
+    links.forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1)); if(s&&s.id!=='conteudo'){mapa[s.id]=a;sio.observe(s)}});
+
+    var espera=false;
+    function rolar(){
+      espera=false; var y=window.scrollY||0;
+      R.classList.toggle('rolou',y>8);
+      clearTimeout(tv); if(pend.length) tv=setTimeout(varre,180);
+      if(y<160) links.forEach(function(a){a.classList.remove('on')});
+
+    }
+    window.addEventListener('scroll',function(){if(!espera){espera=true;requestAnimationFrame(rolar)}},{passive:true});
+    window.addEventListener('resize',rolar);
+    rolar();
+
+  }catch(err){R.classList.remove('anim')}
+})();
+</script>
+</body>
+</html>
